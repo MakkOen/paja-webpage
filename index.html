@@ -29,35 +29,47 @@
     <meta name="geo.region" content="CZ-JM">
     <meta name="geo.placename" content="Brno">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <h1 class="header-title">Psychologické poradenství<br>Pavlína Hlavatá</h1>
-            <p class="header-subtitle">Psychologické poradenství Brno – Pavlína Hlavatá: online i osobně.<br>Metoda solution focus – na řešení orientovaný přístup.<br>PAS-friendly prostředí.</p>
+        <div class="container header-container">
+            <div class="header-text">
+                <h1 class="header-title" data-i18n="header.title">Psychologické poradenství<br>Pavlína Hlavatá</h1>
+                <p class="header-subtitle" data-i18n="header.subtitle">Psychologické poradenství Brno – Pavlína Hlavatá: online i osobně.<br>Metoda solution focus – na řešení orientovaný přístup.<br>PAS-friendly prostředí.</p>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
+                    <span class="lang-current">CZ</span>
+                    <span class="lang-arrow">▼</span>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="cs">CZ</button>
+                    <button class="lang-option" data-lang="en">EN</button>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2 class="hero-title">Psychologické poradenství</h2>
+            <h2 class="hero-title" data-i18n="hero.title">Psychologické poradenství</h2>
         </div>
     </section>
 
     <!-- About Me Section -->
     <section class="about" id="o-mne">
         <div class="container">
-            <h2 class="section-title">O mně</h2>
+            <h2 class="section-title" data-i18n="about.title">O mně</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Dobrý den. Vítám vás na svých webových stránkách. Jmenuji se Pavlína Hlavatá. Narodila jsem se v Brně. Vystudovala jsem jednooborovou psychologii na Filozofické fakultě Masarykovy univerzity v Brně. Po skončení studií jsem nastoupila jako psycholožka do Speciálně pedagogického centra pro klienty s poruchami autistického spektra. Aktuálně jsem frekventantkou psychoterapeutického výcviku přístupu zaměřeného na řešení (Solution focus).</p>
-                    <p>Nabízím možnost individuálních konzultací s jednotlivci, mám zkušenost s prací s dospělými a dospívajícími klienty. S klienty pracuji v Brně nebo online.</p>
+                    <p data-i18n="about.text1">Dobrý den. Vítám vás na svých webových stránkách. Jmenuji se Pavlína Hlavatá. Narodila jsem se v Brně. Vystudovala jsem jednooborovou psychologii na Filozofické fakultě Masarykovy univerzity v Brně. Po skončení studií jsem nastoupila jako psycholožka do Speciálně pedagogického centra pro klienty s poruchami autistického spektra. Aktuálně jsem frekventantkou psychoterapeutického výcviku přístupu zaměřeného na řešení (Solution focus).</p>
+                    <p data-i18n="about.text2">Nabízím možnost individuálních konzultací s jednotlivci, mám zkušenost s prací s dospělými a dospívajícími klienty. S klienty pracuji v Brně nebo online.</p>
                 </div>
                 <div class="about-image">
-                    <img src="portrait.webp" alt="Pavlína Hlavatá - psycholožka" />
+                    <img src="portrait.webp" data-i18n-alt="about.imgAlt" alt="Pavlína Hlavatá - psycholožka" />
                 </div>
             </div>
         </div>
@@ -66,28 +78,28 @@
     <!-- Contact Section (First) -->
     <section class="contact-main" id="kontakt">
         <div class="container">
-            <h2 class="section-title-center">Kontaktujte mě</h2>
-            <p class="contact-intro-center">V případě dotazů nebo zájmu o objednání mne můžete kontaktovat emailem<br><strong><a href="mailto:hlavata.pavlina1@gmail.com" class="email-bold">hlavata.pavlina1@gmail.com</a></strong><br>nebo přes formulář níže:</p>
+            <h2 class="section-title-center" data-i18n="contact.title">Kontaktujte mě</h2>
+            <p class="contact-intro-center" data-i18n="contact.intro">V případě dotazů nebo zájmu o objednání mne můžete kontaktovat emailem<br><strong><a href="mailto:hlavata.pavlina1@gmail.com" class="email-bold">hlavata.pavlina1@gmail.com</a></strong><br>nebo přes formulář níže:</p>
 
             <!-- Contact Form -->
             <form action="https://formspree.io/f/mwpwykkd" method="POST" class="contact-form">
                 <div class="form-group">
-                    <label for="name">Jméno *</label>
+                    <label for="name" data-i18n="form.name">Jméno *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email *</label>
+                    <label for="email" data-i18n="form.email">Email *</label>
                     <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Telefon</label>
+                    <label for="phone" data-i18n="form.phone">Telefon</label>
                     <input type="tel" id="phone" name="phone">
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Zpráva *</label>
+                    <label for="message" data-i18n="form.message">Zpráva *</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
 
@@ -97,29 +109,29 @@
                 <!-- Redirect after submission -->
                 <input type="hidden" name="_next" value="https://pavlinahlavata.eu/#kontakt">
 
-                <button type="submit" class="submit-button">Odeslat</button>
+                <button type="submit" class="submit-button" data-i18n="form.submit">Odeslat</button>
             </form>
         </div>
     </section>
 
     <!-- Image Gallery Bar -->
     <section class="image-gallery">
-        <img src="smol_images/sky.jpeg" alt="Obloha">
-        <img src="smol_images/flower.jpg" alt="Květina">
-        <img src="smol_images/rocks.jpeg" alt="Kameny">
-        <img src="smol_images/leaf.jpg" alt="List">
-        <img src="smol_images/beach.jpeg" alt="Pláž">
+        <img src="smol_images/sky.jpeg" data-i18n-alt="gallery.sky" alt="Obloha">
+        <img src="smol_images/flower.jpg" data-i18n-alt="gallery.flower" alt="Květina">
+        <img src="smol_images/rocks.jpeg" data-i18n-alt="gallery.rocks" alt="Kameny">
+        <img src="smol_images/leaf.jpg" data-i18n-alt="gallery.leaf" alt="List">
+        <img src="smol_images/beach.jpeg" data-i18n-alt="gallery.beach" alt="Pláž">
     </section>
 
     <!-- Pricing Section -->
     <section class="pricing" id="cenik">
         <div class="container">
-            <h2 class="section-title">Ceník</h2>
-            <p class="pricing-note">Platba možná hotově nebo převodem na účet. Služba není hrazena ze zdravotního pojištění.</p>
+            <h2 class="section-title" data-i18n="pricing.title">Ceník</h2>
+            <p class="pricing-note" data-i18n="pricing.note">Platba možná hotově nebo převodem na účet. Služba není hrazena ze zdravotního pojištění.</p>
             <div class="pricing-card">
-                <h3>Konzultace</h3>
-                <p class="pricing-description">Základní 50-55 min</p>
-                <p class="pricing-amount">500,00 Kč</p>
+                <h3 data-i18n="pricing.consultation">Konzultace</h3>
+                <p class="pricing-description" data-i18n="pricing.duration">Základní 50-55 min</p>
+                <p class="pricing-amount" data-i18n="pricing.amount">500,00 Kč</p>
             </div>
         </div>
     </section>
@@ -127,11 +139,11 @@
     <!-- Footer Contact Section -->
     <footer class="footer">
         <div class="container">
-            <h3>Kontaktní informace</h3>
-            <p>V případě zájmu o psychologickou konzultaci mne neváhejte kontaktovat. Ráda zodpovím vaše případné dotazy.</p>
-            <p><strong>Adresa:</strong> Kabátníkova, Brno, 60200</p>
-            <p><strong>Email:</strong> <a href="mailto:hlavata.pavlina1@gmail.com">hlavata.pavlina1@gmail.com</a></p>
-            <p class="copyright">&copy; <span id="current-year"></span> Pavlína Hlavatá - Psychologické poradenství</p>
+            <h3 data-i18n="footer.title">Kontaktní informace</h3>
+            <p data-i18n="footer.text">V případě zájmu o psychologickou konzultaci mne neváhejte kontaktovat. Ráda zodpovím vaše případné dotazy.</p>
+            <p data-i18n="footer.address"><strong>Adresa:</strong> Kabátníkova, Brno, 60200</p>
+            <p data-i18n="footer.email"><strong>Email:</strong> <a href="mailto:hlavata.pavlina1@gmail.com">hlavata.pavlina1@gmail.com</a></p>
+            <p class="copyright" data-i18n="footer.copyright">&copy; <span id="current-year"></span> Pavlína Hlavatá - Psychologické poradenství</p>
             <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
         </div>
     </footer>
@@ -153,6 +165,141 @@
                 ticking = true;
             }
         });
+
+        // Translations
+        const translations = {
+            cs: {
+                'header.title': 'Psychologické poradenství<br>Pavlína Hlavatá',
+                'header.subtitle': 'Psychologické poradenství Brno – Pavlína Hlavatá: online i osobně.<br>Metoda solution focus – na řešení orientovaný přístup.<br>PAS-friendly prostředí.',
+                'hero.title': 'Psychologické poradenství',
+                'about.title': 'O mně',
+                'about.text1': 'Dobrý den. Vítám vás na svých webových stránkách. Jmenuji se Pavlína Hlavatá. Narodila jsem se v Brně. Vystudovala jsem jednooborovou psychologii na Filozofické fakultě Masarykovy univerzity v Brně. Po skončení studií jsem nastoupila jako psycholožka do Speciálně pedagogického centra pro klienty s poruchami autistického spektra. Aktuálně jsem frekventantkou psychoterapeutického výcviku přístupu zaměřeného na řešení (Solution focus).',
+                'about.text2': 'Nabízím možnost individuálních konzultací s jednotlivci, mám zkušenost s prací s dospělými a dospívajícími klienty. S klienty pracuji v Brně nebo online.',
+                'about.imgAlt': 'Pavlína Hlavatá - psycholožka',
+                'contact.title': 'Kontaktujte mě',
+                'contact.intro': 'V případě dotazů nebo zájmu o objednání mne můžete kontaktovat emailem<br><strong><a href="mailto:hlavata.pavlina1@gmail.com" class="email-bold">hlavata.pavlina1@gmail.com</a></strong><br>nebo přes formulář níže:',
+                'form.name': 'Jméno *',
+                'form.email': 'Email *',
+                'form.phone': 'Telefon',
+                'form.message': 'Zpráva *',
+                'form.submit': 'Odeslat',
+                'gallery.sky': 'Obloha',
+                'gallery.flower': 'Květina',
+                'gallery.rocks': 'Kameny',
+                'gallery.leaf': 'List',
+                'gallery.beach': 'Pláž',
+                'pricing.title': 'Ceník',
+                'pricing.note': 'Platba možná hotově nebo převodem na účet. Služba není hrazena ze zdravotního pojištění.',
+                'pricing.consultation': 'Konzultace',
+                'pricing.duration': 'Základní 50-55 min',
+                'pricing.amount': '500,00 Kč',
+                'footer.title': 'Kontaktní informace',
+                'footer.text': 'V případě zájmu o psychologickou konzultaci mne neváhejte kontaktovat. Ráda zodpovím vaše případné dotazy.',
+                'footer.address': '<strong>Adresa:</strong> Kabátníkova, Brno, 60200',
+                'footer.email': '<strong>Email:</strong> <a href="mailto:hlavata.pavlina1@gmail.com">hlavata.pavlina1@gmail.com</a>',
+                'footer.copyright': '&copy; <span id="current-year"></span> Pavlína Hlavatá - Psychologické poradenství'
+            },
+            en: {
+                'header.title': 'Psychological Counseling<br>Pavlína Hlavatá',
+                'header.subtitle': 'Psychological counseling in Brno – Pavlína Hlavatá: online and in person.<br>Solution focus method.<br>ASD-friendly environment.',
+                'hero.title': 'Psychological Counseling',
+                'about.title': 'About Me',
+                'about.text1': 'Hello. Welcome to my website. My name is Pavlína Hlavatá. I was born in Brno. I graduated in Psychology from the Faculty of Arts at Masaryk University in Brno. After completing my studies, I started working as a psychologist at the Special Pedagogical Center for clients with autism spectrum disorders. I am currently a trainee in solution-focused psychotherapy (Solution focus).',
+                'about.text2': 'I offer individual consultations with adults and adolescents. I work with clients in Brno or online.',
+                'about.imgAlt': 'Pavlína Hlavatá - psychologist',
+                'contact.title': 'Contact Me',
+                'contact.intro': 'For questions or to book an appointment, you can contact me by email<br><strong><a href="mailto:hlavata.pavlina1@gmail.com" class="email-bold">hlavata.pavlina1@gmail.com</a></strong><br>or via the form below:',
+                'form.name': 'Name *',
+                'form.email': 'Email *',
+                'form.phone': 'Phone',
+                'form.message': 'Message *',
+                'form.submit': 'Send',
+                'gallery.sky': 'Sky',
+                'gallery.flower': 'Flower',
+                'gallery.rocks': 'Rocks',
+                'gallery.leaf': 'Leaf',
+                'gallery.beach': 'Beach',
+                'pricing.title': 'Pricing',
+                'pricing.note': 'Payment possible in cash or by bank transfer. Service is not covered by health insurance.',
+                'pricing.consultation': 'Consultation',
+                'pricing.duration': 'Standard 50-55 min',
+                'pricing.amount': '500.00 CZK',
+                'footer.title': 'Contact Information',
+                'footer.text': 'If you are interested in a psychological consultation, please do not hesitate to contact me. I will be happy to answer your questions.',
+                'footer.address': '<strong>Address:</strong> Kabátníkova, Brno, 60200',
+                'footer.email': '<strong>Email:</strong> <a href="mailto:hlavata.pavlina1@gmail.com">hlavata.pavlina1@gmail.com</a>',
+                'footer.copyright': '&copy; <span id="current-year"></span> Pavlína Hlavatá - Psychological Counseling'
+            }
+        };
+
+        // Language switching
+        let currentLang = localStorage.getItem('lang') || 'cs';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+
+            // Update text content
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update alt attributes
+            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+                const key = el.getAttribute('data-i18n-alt');
+                if (translations[lang][key]) {
+                    el.alt = translations[lang][key];
+                }
+            });
+
+            // Re-set the year after innerHTML replacement
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+            // Update language switcher button and active state
+            updateLangSwitcher(lang);
+        }
+
+        function updateLangSwitcher(lang) {
+            const currentLabel = document.querySelector('.lang-current');
+            if (currentLabel) {
+                currentLabel.textContent = lang === 'cs' ? 'CZ' : 'EN';
+            }
+
+            // Update active state on options
+            document.querySelectorAll('.lang-option').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
+        // Language dropdown toggle
+        const langToggle = document.getElementById('lang-toggle');
+        const langSwitcher = document.querySelector('.lang-switcher');
+
+        langToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langSwitcher.classList.toggle('open');
+        });
+
+        // Language option selection
+        document.querySelectorAll('.lang-option').forEach(btn => {
+            btn.addEventListener('click', function() {
+                setLanguage(this.dataset.lang);
+                langSwitcher.classList.remove('open');
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function() {
+            langSwitcher.classList.remove('open');
+        });
+
+        // Initialize language on page load
+        setLanguage(currentLang);
     </script>
 </body>
 </html>

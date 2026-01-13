@@ -47,6 +47,19 @@ body {
     padding: 0.5rem 0;
 }
 
+.header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.header-text {
+    flex: 1 1 auto;
+}
+
 .header-title {
     font-size: 1.8rem;
     color: var(--primary-color);
@@ -68,6 +81,83 @@ body {
     opacity: 0;
     max-height: 0;
     margin: 0;
+}
+
+/* Language Switcher */
+.lang-switcher {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.lang-arrow {
+    font-size: 0.65rem;
+    transition: transform 0.2s ease;
+}
+
+.lang-switcher.open .lang-arrow {
+    transform: rotate(180deg);
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.25rem;
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    z-index: 1001;
+    min-width: 100%;
+}
+
+.lang-switcher.open .lang-dropdown {
+    display: block;
+}
+
+.lang-option {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: left;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.lang-option:hover {
+    background-color: #d4e4f7;
+}
+
+.lang-option.active {
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 /* Hero Section */
