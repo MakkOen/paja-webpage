@@ -237,6 +237,12 @@ body {
     font-style: italic;
 }
 
+.pricing-cards {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
 .pricing-card {
     background-color: var(--white);
     border-radius: 10px;
@@ -442,6 +448,14 @@ body {
 
     .pricing-amount {
         font-size: 1.5rem;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        max-width: 100%;
     }
 }
 
